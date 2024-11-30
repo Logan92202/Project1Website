@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Website</title>
+  <title>Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
   <div class="logo-container">
-    <img src="logo.jpg" alt="Logo" class="logo">
+    <img src="ragex.png" alt="Logo" class="logo">
   </div>
-  <input type="text" class="search-bar" placeholder="Search...">
+  <h1> Events </h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
       <ul>
+        <li><a href="index.html">Events</a></li>
         <li><a href="signup.html">Sign Up</a></li>
-        <li><a href="login.html">Log In</a></li>
+        <li><a href="login.html">Login</a></li>
         <li><a href="preferences.html">Preferences</a></li>
         <li><a href="settings.html">Settings</a></li>
         <li><a href="about.html">About</a></li>
@@ -27,8 +28,46 @@
   </div>
 </header>
 <main>
-  <h1>TODO</h1>
-  <p>TODO</p>
+  <div class="page-container">
+    <!-- Event Grid -->
+    <div class="event-grid">
+      <!-- Row 1 -->
+      <div class="event">
+        <h2>Club Night</h2>
+        <img src="photos/club.jpg" alt="Event 1" class="event-image">
+        <a href="/event1.html" class="learn-more-link">Learn more</a>
+      </div>
+      <div class="event">
+        <h2>Yacht Party</h2>
+        <img src="photos/yacht.avif" alt="Event 2" class="event-image">
+        <a href="/event2.html" class="learn-more-link">Learn more</a> 
+      </div>
+  
+      <!-- Row 2 -->
+      <div class="event">
+        <h2>Beach Night</h2>
+        <img src="photos/ppp.jpeg" alt="Event 3" class="event-image">
+        <a href="/event3.html" class="learn-more-link">Learn more</a>
+      </div>
+      <div class="event">
+        <h2>Run Club</h2>
+        <img src="photos/runn.jpg" alt="Event 4" class="event-image">
+        <a href="/event4.html" class="learn-more-link">Learn more</a>
+      </div>
+  
+      <!-- Row 3 -->
+      <div class="event">
+        <h2>Barcrawl</h2>
+        <img src="photos/barcrawl.jpg" alt="Event 5" class="event-image">
+        <a href="/event5.html" class="learn-more-link">Learn more</a>
+      </div>
+      <div class="event">
+        <h2>Brickell</h2>
+        <img src="photos/olol.jpg" alt="Event 6" class="event-image">
+        <a href="/event6.html" class="learn-more-link">Learn more</a>
+      </div>
+    </div>
+  </div>
 </main>
 <script>
   function toggleDropdown() {

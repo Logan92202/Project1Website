@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help</title>
+  <title>Beach Night</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
   <div class="logo-container">
     <img src="ragex.png" alt="Logo" class="logo">
   </div>
-  <h1> Help </h1>
+  <h1> Beach Night </h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,27 +27,22 @@
     </div>
   </div>
 </header>
-<main>
-  <p>TODO</p>
-</main>
-</body>
-</html>
 <script>
-  function toggleDropdown() {
-    const dropdown = document.getElementById('dropdownMenu');
-    if (dropdown.style.display === 'block') {
-      dropdown.style.display = 'none';
-    } else {
-      dropdown.style.display = 'block';
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+      } else {
+        dropdown.style.display = 'block';
+      }
     }
-  }
-
-  // Close dropdown when clicking outside
-  window.addEventListener('click', function (e) {
-    const dropdown = document.getElementById('dropdownMenu');
-    const userIcon = document.querySelector('.user-icon');
-    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.style.display = 'none';
-    }
-  });
-</script>
+  
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const userIcon = document.querySelector('.user-icon');
+      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+  </script>

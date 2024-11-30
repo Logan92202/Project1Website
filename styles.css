@@ -1,106 +1,155 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-}
-
-header {
+    font-family: Arial, sans-serif;
+    background-color: #8e4e77;
+    text-align: center;
+  }
+  
+  /* Header Styling */
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #e78D4D;
-    color: #ffA;
+    background-color: #404040;
+    color: #f6d8f1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
+    position: relative;
+  }
+  
+  .logo-container img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-}
-
-.search-bar {
-    flex-grow: 1;
-    margin: 0 20px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 20px;
-}
-
-.search-bar:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.user-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+  }
+  
+  /* Center the 'Events' title */
+  header h1 {
+    font-size: 2.5rem;
+    color: #f6d8f1;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .user-menu {
+    position: relative;
+  }
+  
+/* User Icon Styling for Dropdown (Upside-Down Triangle) */
 .user-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #555;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;  /* Left side of the triangle */
+  border-right: 10px solid transparent; /* Right side of the triangle */
+  border-top: 10px solid #f6d8f1;      /* Bottom side of the triangle, facing up */
+  cursor: pointer;
 }
 
-.user-icon:hover {
-    background-color: #777;
-}
-
-.user-menu {
-    position: relative;
-}
-
-.dropdown-menu {
+  
+  .user-icon:hover {
+    background-color: #dda3c9;
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
     position: absolute;
     top: 50px;
     right: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: none; /* Hidden by default */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-}
-
-.dropdown-menu ul {
+  }
+  
+  .dropdown-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.dropdown-menu ul li {
+  }
+  
+  .dropdown-menu ul li {
     padding: 10px 20px;
-}
-
-.dropdown-menu ul li a {
+  }
+  
+  .dropdown-menu ul li a {
     text-decoration: none;
     color: #333;
     font-size: 14px;
-}
-
-.dropdown-menu ul li:hover {
+  }
+  
+  .dropdown-menu ul li:hover {
     background-color: #f0f0f0;
-}
-
-.user-icon:hover {
-    background-color: #555; /* Change color on hover */
-}
-
-main {
-    text-align: center;
+  }
+  
+  /* Main Content Styling */
+  main {
     margin: 20px;
     padding: 20px;
-}
+  }
+  
+  /* Page Container */
+  .page-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Event Grid Styling */
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between rows and columns */
+    padding: 20px;
+  }
+  
+  /* Event Box Styling */
+  .event {
+    background-color: #b36e9b;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .event:hover {
+    transform: scale(1.05); /* Optional: Makes the event box slightly larger on hover */
+  }
+  
+  .event h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .event img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .event p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Learn More Link Styling */
+  .learn-more-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #f6d8f1;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .learn-more-link:hover {
+    color: #dda3c9; /* Pink highlight color on hover */
+  }
+  
