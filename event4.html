@@ -9,9 +9,11 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo" class="logo">
+    </a>
   </div>
-  <h1> Run Club </h1>
+  <h1>Run Club</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,22 +29,55 @@
     </div>
   </div>
 </header>
+<main>
+  <section class="event-details">
+    <div class="event-banner">
+      <img src="photos/runn.jpg" alt="Run Club" class="event-banner-image">
+    </div>
+    <div class="event-info">
+      <h2>About Run Club</h2>
+      <p>Join our weekly Run Club to stay fit, meet new friends, and explore scenic routes around the city! Whether you're a seasoned runner or just getting started, everyone is welcome to lace up and hit the pavement with us.</p>
+
+      <h3>Date & Time</h3>
+      <p><strong>Date:</strong> Every Saturday<br>
+        <strong>Time:</strong> 7:00 AM - 9:00 AM</p>
+
+      <h3>Meeting Location</h3>
+      <p>Bayfront Park, 301 Biscayne Blvd, Miami, FL 33132</p>
+
+      <h3>Event Highlights</h3>
+      <ul>
+        <li>Guided warm-up and cool-down sessions</li>
+        <li>Flexible pace groups for all skill levels</li>
+        <li>Hydration stations along the route</li>
+        <li>Post-run coffee meetup</li>
+        <li>Exclusive discounts at partner sports stores</li>
+      </ul>
+
+      <h3>Membership</h3>
+      <p>Membership is free! Sign up to receive route updates and event reminders.</p>
+      <a href="signup.html" class="button">Join the Club</a>
+    </div>
+  </section>
+</main>
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

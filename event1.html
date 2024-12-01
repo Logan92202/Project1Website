@@ -9,9 +9,11 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo" class="logo">
+    </a>
   </div>
-  <h1> Club Night </h1>
+  <h1>Club Night</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,22 +29,42 @@
     </div>
   </div>
 </header>
+<main>
+  <div class="event-details">
+    <img src="photos/club.jpg" alt="Club Night" class="event-image-large">
+    <div class="event-info">
+      <h2>Club Night</h2>
+      <p>
+        Join us for an unforgettable Club Night featuring live DJs, exciting performances, and an electric atmosphere.
+        Come dance the night away at one of the trendiest spots in town. Perfect for meeting new people, enjoying great music, and having a fantastic time.
+      </p>
+      <h3>Details:</h3>
+      <ul>
+        <li><strong>Date:</strong> Friday, December 15, 2024</li>
+        <li><strong>Time:</strong> 9:00 PM - 2:00 AM</li>
+        <li><strong>Location:</strong> Downtown Nightclub, 123 Club Street, Miami, FL</li>
+        <li><strong>Age Restriction:</strong> 21+</li>
+      </ul>
+      <h3>Tickets:</h3>
+      <p>General Admission: $20 | VIP: $50</p>
+      <a href="purchase.html" class="buy-ticket-button">Buy Tickets</a>
+    </div>
+  </div>
+</main>
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  });
+</script>
+</body>
+</html>

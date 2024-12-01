@@ -9,9 +9,11 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo">
+    </a>
   </div>
-  <h1> Help </h1>
+  <h1>Help</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -20,18 +22,28 @@
         <li><a href="signup.html">Sign Up</a></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="preferences.html">Preferences</a></li>
-        <li><a href="settings.html">Settings</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
     </div>
   </div>
 </header>
+
 <main>
-  <p>TODO</p>
+  <div class="help-container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to reach out to us through the following contact methods:</p>
+
+    <ul class="contact-list">
+      <li><strong>Phone:</strong> +1 234 567 890</li>
+      <li><strong>Email:</strong> <a href="mailto:help@ragex.com">help@ragex.com</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/ragex_events" target="_blank">@ragex_events</a></li>
+    </ul>
+
+    <p>Our team is here to assist you with any event-related queries or technical support. We look forward to helping you!</p>
+  </div>
 </main>
-</body>
-</html>
+
 <script>
   function toggleDropdown() {
     const dropdown = document.getElementById('dropdownMenu');
@@ -51,3 +63,7 @@
     }
   });
 </script>
+
+</body>
+</html>
+

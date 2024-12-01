@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title>About Us</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo">
+    </a>
   </div>
-  <h1> About </h1>
+  <h1>About Us</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -20,29 +22,40 @@
         <li><a href="signup.html">Sign Up</a></li>
         <li><a href="login.html">Login</a></li>
         <li><a href="preferences.html">Preferences</a></li>
-        <li><a href="settings.html">Settings</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="help.html">Help</a></li>
       </ul>
     </div>
   </div>
 </header>
+
+<main>
+  <div class="page-container">
+    <h2>Welcome to Our Community!</h2>
+    <p>We are a group of event enthusiasts who create unique and exciting experiences, such as yacht parties, beach nights, and bar crawls, tailored for everyone to enjoy. Our goal is to bring people together in an atmosphere of fun, connection, and excitement!</p>
+    <p>Whether you're looking to dance the night away, enjoy the fresh ocean breeze, or explore the vibrant nightlife scene, we have something for you. Join us for our next event and make lasting memories!</p>
+  </div>
+</main>
+
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

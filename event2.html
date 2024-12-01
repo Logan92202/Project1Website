@@ -9,9 +9,11 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo" class="logo">
+    </a>
   </div>
-  <h1> Yacht Party </h1>
+  <h1>Yacht Party</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,22 +29,55 @@
     </div>
   </div>
 </header>
+<main>
+  <section class="event-details">
+    <div class="event-banner">
+      <img src="photos/yacht.avif" alt="Yacht Party" class="event-banner-image">
+    </div>
+    <div class="event-info">
+      <h2>About the Yacht Party</h2>
+      <p>Join us for an unforgettable evening aboard a luxury yacht. Experience stunning waterfront views, gourmet catering, and a live DJ spinning your favorite tunes as you dance the night away under the stars.</p>
+
+      <h3>Date & Time</h3>
+      <p><strong>Date:</strong> Saturday, December 9th, 2024<br>
+        <strong>Time:</strong> 7:00 PM - 12:00 AM</p>
+
+      <h3>Location</h3>
+      <p>Miami Marina, 300 Alton Road, Miami Beach, FL 33139</p>
+
+      <h3>Event Highlights</h3>
+      <ul>
+        <li>Luxury yacht with three decks</li>
+        <li>Open bar and premium cocktails</li>
+        <li>Gourmet dinner buffet</li>
+        <li>Live DJ and dance floor</li>
+        <li>Photo booth and professional photography</li>
+      </ul>
+
+      <h3>Tickets</h3>
+      <p>Tickets are $150 per person. Limited availability—secure your spot today!</p>
+      <a href="signup.html" class="button">Get Tickets</a>
+    </div>
+  </section>
+</main>
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

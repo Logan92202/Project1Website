@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brickell</title>
+  <title>Brickell Night</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo" class="logo">
+    </a>
   </div>
-  <h1> Brickell </h1>
+  <h1>Brickell Night</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,22 +29,55 @@
     </div>
   </div>
 </header>
+<main>
+  <section class="event-details">
+    <div class="event-banner">
+      <img src="photos/olol.jpg" alt="Brickell Night" class="event-banner-image">
+    </div>
+    <div class="event-info">
+      <h2>About Brickell Night</h2>
+      <p>Discover the heart of Miami’s nightlife in Brickell! A night filled with chic vibes, great music, and world-class venues. Whether you’re here to dance, network, or unwind, Brickell Night offers an unforgettable urban experience.</p>
+
+      <h3>Date & Time</h3>
+      <p><strong>Date:</strong> Saturday, April 6th<br>
+        <strong>Time:</strong> 7:30 PM - 2:30 AM</p>
+
+      <h3>Location</h3>
+      <p>Multiple venues across Brickell Avenue, starting at Riverside Miami, 444 SW 2nd Ave, Miami, FL 33130.</p>
+
+      <h3>Event Highlights</h3>
+      <ul>
+        <li>Live DJ performances and entertainment</li>
+        <li>Signature cocktails and curated drink specials</li>
+        <li>Access to exclusive rooftop lounges</li>
+        <li>Photo ops with Miami’s iconic skyline</li>
+        <li>Meet-and-greet opportunities with local influencers</li>
+      </ul>
+
+      <h3>Tickets</h3>
+      <p>Join the party! Early reservations are recommended to secure your spot in this exclusive event.</p>
+      <a href="signup.html" class="button">Reserve Now</a>
+    </div>
+  </section>
+</main>
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

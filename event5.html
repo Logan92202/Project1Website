@@ -9,9 +9,11 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo" class="logo">
+    </a>
   </div>
-  <h1> Bar Crawl </h1>
+  <h1>Bar Crawl</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,22 +29,55 @@
     </div>
   </div>
 </header>
+<main>
+  <section class="event-details">
+    <div class="event-banner">
+      <img src="photos/barcrawl.jpg" alt="Bar Crawl" class="event-banner-image">
+    </div>
+    <div class="event-info">
+      <h2>About the Bar Crawl</h2>
+      <p>Experience the city's best nightlife on our legendary Bar Crawl! Join friends and fellow party-goers for a night of drinks, games, and unforgettable memories as we visit the top bars and pubs in the area.</p>
+
+      <h3>Date & Time</h3>
+      <p><strong>Date:</strong> Friday, March 15th<br>
+        <strong>Time:</strong> 8:00 PM - 2:00 AM</p>
+
+      <h3>Starting Point</h3>
+      <p>Brickell City Centre, 701 S Miami Ave, Miami, FL 33130</p>
+
+      <h3>Event Highlights</h3>
+      <ul>
+        <li>Exclusive drink specials at each venue</li>
+        <li>Interactive games and challenges</li>
+        <li>Professional party guides</li>
+        <li>VIP access to bars and clubs</li>
+        <li>Free swag and giveaways</li>
+      </ul>
+
+      <h3>Tickets</h3>
+      <p>Get your tickets now to secure your spot!</p>
+      <a href="signup.html" class="button">Get Tickets</a>
+    </div>
+  </section>
+</main>
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

@@ -9,9 +9,11 @@
 <body>
 <header>
   <div class="logo-container">
-    <img src="ragex.png" alt="Logo" class="logo">
+    <a href="index.html">
+      <img src="ragex.png" alt="Logo" class="logo">
+    </a>
   </div>
-  <h1> Beach Night </h1>
+  <h1>Beach Night</h1>
   <div class="user-menu">
     <div class="user-icon" onclick="toggleDropdown()"></div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -27,22 +29,55 @@
     </div>
   </div>
 </header>
+<main>
+  <section class="event-details">
+    <div class="event-banner">
+      <img src="photos/ppp.jpeg" alt="Beach Night" class="event-banner-image">
+    </div>
+    <div class="event-info">
+      <h2>About Beach Night</h2>
+      <p>Escape the ordinary and join us for a magical Beach Night event! Unwind with the sound of the waves, dance barefoot on the sand, and enjoy an evening of great music, delicious food, and unforgettable memories.</p>
+
+      <h3>Date & Time</h3>
+      <p><strong>Date:</strong> Friday, December 15th, 2024<br>
+        <strong>Time:</strong> 6:00 PM - 11:30 PM</p>
+
+      <h3>Location</h3>
+      <p>South Beach, 1200 Ocean Drive, Miami Beach, FL 33139</p>
+
+      <h3>Event Highlights</h3>
+      <ul>
+        <li>Bonfire and s'mores station</li>
+        <li>Live acoustic performances and DJ sets</li>
+        <li>Food trucks with local cuisine</li>
+        <li>Interactive games and activities</li>
+        <li>Glow-in-the-dark beach accessories</li>
+      </ul>
+
+      <h3>Tickets</h3>
+      <p>Tickets are $30 per person. Early bird discounts available until December 1st!</p>
+      <a href="signup.html" class="button">Reserve Your Spot</a>
+    </div>
+  </section>
+</main>
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
     }
-  
-    // Close dropdown when clicking outside
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('dropdownMenu');
-      const userIcon = document.querySelector('.user-icon');
-      if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
-    });
-  </script>
+  }
+
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdownMenu');
+    const userIcon = document.querySelector('.user-icon');
+    if (!userIcon.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
